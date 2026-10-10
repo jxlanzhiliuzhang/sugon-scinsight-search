@@ -1,0 +1,27 @@
+name: sugon-scinsight-skill
+name_zh: scnet·科学文献洞察智能体
+name_en: sugon-scinsight Agent
+description: Academic literature search Connector for finding papers, research literature, and related studies.
+description_zh: 学术文献检索 Connector：用于查论文、找文献、搜索相关研究和文献调研。对于明确的学术检索请求，优先使用 searchAcademicLiterature MCP 工具，聚合运行时已配置并启用的学术数据源，并返回可追溯的结构化文献元数据。
+description_en: Academic literature search Connector for finding papers, research literature, and related studies. For explicit literature-search requests, prefer the searchAcademicLiterature MCP tool to aggregate results from configured and enabled academic providers.
+source: sugon-scinsight-agent
+version: "2.1.0"
+type: mcp
+authors:
+  - liuzhang
+mcp:
+  server: sugon-scinsight-agent
+  transport: streamableHttp
+  url: https://sci.ksai.scnet.cn:58043/scnetmcp
+  timeout_ms: 360000
+primary_tool: searchAcademicLiterature
+examples_zh:
+  - 查论文：深度学习在蛋白质结构预测中的应用
+  - 帮我找近三年的钙钛矿太阳能电池文献
+  - 搜索关于光互连拓扑的相关研究
+  - 做一个关于 AI for Science 的文献调研，给出10篇论文
+examples_en:
+  - Find papers about protein structure prediction
+  - Search recent literature on perovskite solar cells
+  - Find related academic studies on optical interconnects
+  - Search 10 papers about AI for Science
